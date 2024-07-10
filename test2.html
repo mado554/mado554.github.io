@@ -61,6 +61,17 @@
             display: inline-block;
         }
     </style>
+    <script>
+            function Hello (event) {
+            event.preventDefault();
+            var name=document.getElementById("name").value;
+            var age=document.getElementById("age").value;
+            alert("Hello "+ name);
+            if(age<16){
+                alert("You are" + age +" old" + " Most people your age think about games and you think about studying. You are really hardworking.");
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>About me</h1>
@@ -106,8 +117,8 @@
     <h2>What about you ? share with us</h2>
     <form >
         
-        <input type="text" name="name" class="about" placeholder="Enter your full name">
-        <input type="text" name="age" class="about" placeholder="Enter your Age"> 
+        <input type="text" name="name" class="about" placeholder="Enter your full name" id ="name">
+        <input type="number" name="age" class="about" placeholder="Enter your Age" id="name"> 
         <input type="text" name="address" class="about" placeholder="Enter your Address"> 
         <input type="text" name="phone_num" class="about" placeholder="Enter your Phone number">
         <input type="text" name="f_skill" class="about_2" placeholder="Enter your first skill">  
