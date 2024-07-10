@@ -7,7 +7,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <link href="animation.css" rel="stylesheet">
-
+    <script>
+            function Hello (event) {
+            event.preventDefault();
+            var name=document.getElementById("name").value;
+            var age=document.getElementById("age").value;
+            alert("Hello "+ name " Welcome to our website");
+            if(age<16){
+                alert("You are" + age +" old" + " Most people your age think about games and you think about studying. You are really hardworking.");
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>About me</h1>
@@ -52,10 +62,10 @@
         <div class="about_you">
             <div class="text" style="width: 800px;" class="Press-Start-2P">What about you ? share with us</div>
             <div>
-    <form >
+    <form method="post" onsubmit="Hello(event)">
         <div class="about_g">
-        <input type="text" name="name" class="about" placeholder="Enter your full name">
-        <input type="text" name="age" class="about" placeholder="Enter your Age"> 
+        <input type="text" name="name" class="about" placeholder="Enter your full name" id="name">
+        <input type="number" name="age" class="about" placeholder="Enter your Age" id="age"> 
         </div>
         <div class="about_g">
         <input type="text" name="address" class="about" placeholder="Enter your Address"> 
