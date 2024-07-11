@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>To-Do List</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background-color: #add8e6;
+    }
+
+    .container {
+      background-color: #FFFFFF;
+      width: 350px;
+      height: 500px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .tasks {
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .task-text {
+      flex: 1;
+    }
+
+    .delete-button {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .add-button {
+      background-color: #add8e6;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const add = document.getElementById('add');
+      const text = document.getElementById('text');
+      const lists = document.getElementById('lists');
+
+      add.addEventListener('click', function () {
+        const t_text = text.value.trim();
+
+        if (t_text !== '') {
+          const t_item = document.createElement('li');
+          t_item.className = 'tasks';
+          t_item.innerHTML = `
+            <span class="task-text">${t_text}</span>
+            <button class="delete-button">Delete</button>
+          `;
+
+          lists.appendChild(t_item);
+          text.value = '';
+
+          const deleteButton = t_item.querySelector('.delete-button');
+          deleteButton.addEventListener('click', function () {
+            t_item.remove();
+          });
+        }
+      });
+    });
+  </script>
+  
+
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div style="justify-content:space-between; background-color: #f5f5f5; padding: 10px; border-radius:40px;display:flex ; margin-bottom:20px;">
+      <input type="text" id="text" class="tasks" placeholder="Enter Your task">
+      <button id="add" class="add-button">Add</button>
+    </div>
+
+    <ul id="lists"></ul>
+  </div>
+</body>
+</html>
