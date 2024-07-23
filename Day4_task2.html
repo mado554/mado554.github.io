@@ -137,32 +137,32 @@
             margin: 0 10px;
             cursor: pointer;
         }
-        .CH_C{
+        .CH_C {
             background-color: black;
-             border: none;
-              border-radius: 3px;
-               padding: 20px 20px; 
-               margin: 0 10px; 
-               cursor: pointer;
+            border: none;
+            border-radius: 3px;
+            padding: 20px 20px;
+            margin: 0 10px;
+            cursor: pointer;
         }
         .nav:hover {
             background-color: blueviolet;
         }
-        .lightmode{
+        .lightmode {
             background-color: white;
-            color:black;
+            color: black;
         }
-        .lightmode1{
+        .lightmode1 {
             background-color: white;
         }
-        .lightmode2{
+        .lightmode2 {
             background-color: black;
             color: white;
         }
-        .formtable{
+        .formtable {
             background-color: rgb(59, 59, 59);
         }
-        .wt_about{
+        .wt_about {
             color: white;
         }
     </style>
@@ -171,30 +171,28 @@
             event.preventDefault();
             var name = document.getElementById("name").value;
             var age = document.getElementById("age").value;
-            alert("Hello " + name +" Welcome to our website");
+            alert("Hello " + name + " Welcome to our website");
             if (age < 16) {
                 alert("You are " + age + " years old. Most people your age think about games and you think about studying. You are really hardworking.");
             }
         }
         function changeColor() {
-        var element = document.body;
-        var header = document.getElementById("header");
-        var p_name = document.getElementById("p_name");
-        var chang_c = document.getElementById("chang_c");
-        var about66 = document.getElementById("about66");
-        var about_you = document.getElementById("about_you");
-        var wt_about = document.getElementById("wt_about");
-        var information = document.getElementByclassName("information");
-        element.classList.toggle("lightmode");
-        header.classList.toggle("lightmode2");
-        p_name.classList.toggle("lightmode2");
-        chang_c.classList.toggle("lightmode1");
-        about66.classList.toggle("lightmode");
-        about_you.classList.toggle("formtable");
-        wt_about.classList.toggle("wt_about");
-        information.classList.toggle("lightmode");
-        
-
+            var element = document.body;
+            var header = document.getElementById("header");
+            var p_name = document.getElementById("p_name");
+            var chang_c = document.getElementById("chang_c");
+            var about66 = document.getElementById("about66");
+            var about_you = document.getElementById("about_you");
+            var wt_about = document.getElementById("wt_about");
+            var information = document.getElementsByClassName("information")[0];
+            element.classList.toggle("lightmode");
+            header.classList.toggle("lightmode2");
+            p_name.classList.toggle("lightmode2");
+            chang_c.classList.toggle("lightmode1");
+            about66.classList.toggle("lightmode");
+            about_you.classList.toggle("formtable");
+            wt_about.classList.toggle("wt_about");
+            information.classList.toggle("lightmode");
         }
     </script>
 </head>
@@ -205,11 +203,11 @@
             <div class="p_name" id="p_name">Ahmed</div>
         </div>
         <div class="nav-container">
-            <button class="CH_C" onclick="changeColor()" id="chang_c"></button> 
-            <button class="nav">Home</button> 
-            <button class="nav">CSS</button> 
-            <button class="nav">About</button> 
-            <button class="nav" >Sign in</button>
+            <button class="CH_C" onclick="changeColor()" id="chang_c">Change Color</button>
+            <button class="nav">Home</button>
+            <button class="nav">CSS</button>
+            <button class="nav">About</button>
+            <button class="nav">Sign in</button>
         </div>
     </div>
     <div class="contain">
@@ -245,17 +243,17 @@
         <form method="post" onsubmit="Hello(event)">
             <div class="about_g">
                 <input type="text" name="name" class="about" placeholder="Enter your full name" id="name">
-                <input type="number" name="age" class="about" placeholder="Enter your age" id="age"> 
+                <input type="number" name="age" class="about" placeholder="Enter your age" id="age">
             </div>
             <div class="about_g">
-                <input type="text" name="address" class="about" placeholder="Enter your address"> 
+                <input type="text" name="address" class="about" placeholder="Enter your address">
                 <input type="text" name="phone_num" class="about" placeholder="Enter your phone number">
             </div>
             <div class="container">
                 <div class="about_2_g">
-                    <input type="text" name="f_skill" class="about_2" placeholder="Enter your first skill">  
-                    <input type="text" name="s_skill" class="about_2" placeholder="Enter your second skill">  
-                    <input type="text" name="th_skill" class="about_2" placeholder="Enter your third"><br>  
+                    <input type="text" name="f_skill" class="about_2" placeholder="Enter your first skill">
+                    <input type="text" name="s_skill" class="about_2" placeholder="Enter your second skill">
+                    <input type="text" name="th_skill" class="about_2" placeholder="Enter your third skill"><br>
                 </div>
                 <input type="submit" class="submit">
             </div>
@@ -263,3 +261,4 @@
     </div>
 </body>
 </html>
+
